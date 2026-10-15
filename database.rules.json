@@ -1,0 +1,10 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "txns": { ".indexOn": ["status", "user_id", "created_at"] },
+    "earnings": { ".indexOn": ["ts", "app_id"] },
+    "logs": { ".indexOn": ["ts"] },
+    "licenses": { ".indexOn": ["chat_id", "app_id"] }
+  }
+}

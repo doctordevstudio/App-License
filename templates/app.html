@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#09090f">
+  <title>GZ Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/app.css?v=1">
+</head>
+<body>
+  <div class="blobs" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+  <div class="shell">
+    <aside id="drawer" class="drawer" aria-label="Navigation">
+      <div class="brand"><span class="logo-badge sm">⚡</span><span><b>GZ</b>Panel</span></div>
+      <nav id="nav">
+        <a href="#/" data-route="home"><i>🏠</i>Home</a>
+        <a href="#/users" data-route="users"><i>👥</i>Users</a>
+        <a href="#/earning" data-route="earning"><i>💸</i>Earning</a>
+        <a href="#/upi" data-route="upi"><i>🏦</i>UPI ID</a>
+        <a href="#/plans" data-route="plans"><i>🏷️</i>Plans</a>
+        <a href="#/logs" data-route="logs"><i>📜</i>Logs</a>
+        <a href="#/settings" data-route="settings"><i>⚙️</i>Settings</a>
+      </nav>
+      <div class="me">
+        <div class="avatar" id="meAvatar">?</div>
+        <div class="me-txt"><b id="meName">…</b><small id="meRole"></small></div>
+        <button class="icon-btn" id="logoutBtn" title="Log out" aria-label="Log out">⏻</button>
+      </div>
+    </aside>
+    <div id="scrim" class="scrim"></div>
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn only-mobile" id="menuBtn" aria-label="Open menu">☰</button>
+        <label class="search">
+          <span aria-hidden="true">🔎</span>
+          <input id="globalSearch" type="search" placeholder="Search users — name, @username, chat id, license key" autocomplete="off" maxlength="64">
+        </label>
+        <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">🌗</button>
+      </header>
+      <section id="view" class="view" aria-live="polite"></section>
+    </main>
+  </div>
+  <div id="toasts" class="toasts" role="status"></div>
+  <div id="modalRoot"></div>
+  <script type="module" src="/static/js/app.js?v=1"></script>
+</body>
+</html>
